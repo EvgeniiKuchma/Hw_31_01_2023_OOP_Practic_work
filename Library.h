@@ -25,21 +25,21 @@ public:
 	virtual	void addSubcriber(Subscriber& subs) override {
 		_data_subs.push({ subs });
 	}
+	// leetcode - easy
+	// yandex interview razbor
 	virtual	void TakeBookSubcriber(const std::string& name) override {
 		Subscriber& s1 = _data_subs.front();
-		Book& b1 = _data_book.front();
+		//Book& b1 = _data_book.front(); // [1][2][3]
 			for (size_t i = 0; i < _data_book.size(); i++) {
-				if (s1.getWantedBook() == b1.getNameBook()) {
+				if (s1.getWantedBook() == _data_book[i].getNameBook()) {
 					_data_book.erase({ _data_book.begin() + i });
 					_data_subs.pop();
 					std::cout << "Plase take book" << std::endl;
 					return;
 				}
-				else
-					std::cout << "Book not found" << std::endl;
-				_data_subs.pop();
-				
 			}
+			std::cout << "Book not found" << std::endl;
+			_data_subs.pop();
 		
 	}
 private:
