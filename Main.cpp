@@ -23,10 +23,10 @@ int main() {
 	lyb.addSubcriber(subs2); 
 	lyb.addSubcriber(subs3);
 	lyb.addSubcriber(subs4);
-	lyb.TakeBookSubcriber("Chaika");
-	lyb.TakeBookSubcriber("Registr"); 
-	lyb.TakeBookSubcriber("Mobbi Dec");
-	lyb.TakeBookSubcriber("Mobbi Dec2");
+	lyb.TakeBookSubcriber();
+	lyb.TakeBookSubcriber(); 
+	lyb.TakeBookSubcriber();
+	lyb.TakeBookSubcriber();
 	std::cout << "As we can see the 'remove' and 'replace' functions work right" << std::endl;
 	return 0;
 }

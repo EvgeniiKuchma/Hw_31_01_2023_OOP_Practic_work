@@ -27,7 +27,7 @@ public:
 	}
 	// leetcode - easy
 	// yandex interview razbor
-	virtual	void TakeBookSubcriber(const std::string& name) override {
+	virtual	void TakeBookSubcriber() override {
 		Subscriber& s1 = _data_subs.front();
 		//Book& b1 = _data_book.front(); // [1][2][3]
 			for (size_t i = 0; i < _data_book.size(); i++) {
